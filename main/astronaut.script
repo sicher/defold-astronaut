@@ -4,6 +4,8 @@ function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.dir = vmath.vector3()
 	self.current_anim = nil
+
+	msg.post("test:/hello", "hello")
 end
 
 local function animate(self)
@@ -45,7 +47,6 @@ function on_input(self, action_id, action)
 	elseif action_id == hash("right") then
 		self.dir.x = 1
 	end
-	
 end
 
 function on_reload(self)
